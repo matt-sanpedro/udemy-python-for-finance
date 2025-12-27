@@ -1,0 +1,31 @@
+"""
+Docstring for q-01-dictionary-loop
+
+In this exercise you will use the same dictionaries as the ones we used in the lesson - 
+prices and quantity. This time, don't just calculate all the money Jan spent. 
+Calculate how much she spent on products with a price of 5 dollars or more.
+"""
+prices = {
+    "box_of_spaghetti" : 4,
+    "lasagna"  : 5,
+    "hamburger" : 2
+   }
+quantity = {
+    "box_of_spaghetti" : 6,
+    "lasagna"  : 10,
+    "hamburger" : 0
+    }
+
+money_spent = 0
+
+def five_or_more(prices, quantity):
+    total = 0
+
+    for item in prices:
+        # print(prices[item])
+        if prices[item] >= 5:
+            total += prices[item] * quantity[item]
+
+    return total
+
+print(five_or_more(prices, quantity))
